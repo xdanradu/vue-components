@@ -59,6 +59,13 @@ export default {
 
 ```
 
+# TODO
+
+- Minify the lib deployment package and exclude the src from npmjs (Keep the link to Github repo in the Readme file)
+- Automate the deployment to npmjs through a github hook
+- Components showcase (also built in this lib project) deployed on Heroku
+
+
 Git repo: https://github.com/xdanradu/vue-components
 
 
