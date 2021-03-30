@@ -1,5 +1,9 @@
 {
   "name": "@xdanradu/vue-components",
+  "main": "dist/your-component-name.ssr.js",
+  "module": "dist/your-component-name.esm.js",
+  "unpkg": "dist/your-component-name.min.js",
+  "style": "dist/your-component-name.css",
   "version": "0.1.5",
   "scripts": {
     "dev":
@@ -51,5 +55,5 @@
     "*.json",
     "*.js"
   ],
-  "main": "./dist/xdr.common.js"
+  "main": "./dist/xdanradu.common.js"
 }

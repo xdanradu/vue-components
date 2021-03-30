@@ -1,1 +1,2 @@
-export { default as Banner } from './components/Banner.vue';
+import Banner from './components/Banner.vue'
+export { Banner }
