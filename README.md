@@ -32,4 +32,6 @@ npm install  @xdanradu/vue-components -D
 
 import Components from "@flockos/vue-components";
 
+Git repo: https://github.com/xdanradu/vue-components
+
 
