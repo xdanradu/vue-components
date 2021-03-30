@@ -30,7 +30,16 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 npm install  @xdanradu/vue-components -D
 ```
 
-import Components from "@xdanradu/vue-components";
+```
+import "@xdanradu/vue-components/dist/xdanradu.css"
+import Banner from '@xdanradu/vue-components';
+```
+
+Usage:
+```html
+<Banner msg="hello banner"></Banner>
+
+```
 
 Git repo: https://github.com/xdanradu/vue-components
 
