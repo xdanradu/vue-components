@@ -1,10 +1,6 @@
 {
   "name": "@xdanradu/vue-components",
-  "main": "dist/your-component-name.ssr.js",
-  "module": "dist/your-component-name.esm.js",
-  "unpkg": "dist/your-component-name.min.js",
-  "style": "dist/your-component-name.css",
-  "version": "0.1.5",
+  "version": "0.1.9",
   "scripts": {
     "dev":
     "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -55,5 +51,8 @@
     "*.json",
     "*.js"
   ],
-  "main": "./dist/xdanradu.common.js"
+  "main": "dist/xdanradu.common.js",
+  "unpkg": "dist/xdanradu.umd.min.js",
+  "jsdelivr": "dist/xdanradu.umd.min.js",
+  "style": "dist/xdanradu.css"
 }

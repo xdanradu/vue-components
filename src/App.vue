@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Banner>This is a banner!</Banner>
+    <Banner msg="Some message from outside"></Banner>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>

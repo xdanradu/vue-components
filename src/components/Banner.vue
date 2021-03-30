@@ -1,36 +1,15 @@
 <template>
-    <div class="banner" :style="bannerStyles" :class="`banner__${position}`">
+    <div class="banner">
+        <h1>{{ msg }}</h1>
         <slot></slot>
     </div>
 </template>
 <script>
-    const defaultStyles = {
-        left: 0,
-        right: 0,
-    };
     export default {
         name: 'Banner',
         props: {
-            position: {
-                type: String,
-                default: 'top',
-                validator(position) {
-                    return ['top', 'bottom'].indexOf(position) > -1;
-                },
-            },
-            styles: {
-                type: Object,
-                default: () => ({}),
-            },
-        },
-        data() {
-            return {
-                bannerStyles: {
-                    ...defaultStyles,
-                    ...this.styles,
-                },
-            };
-        },
+            msg: String,
+        }
     };
 </script>
 <style scoped>
@@ -41,11 +20,5 @@
         text-align: left;
         position: fixed;
         z-index: 2;
-    }
-    .banner__top {
-        top: 0;
-    }
-    .banner__bottom {
-        bottom: 0;
     }
 </style>
