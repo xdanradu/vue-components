@@ -65,6 +65,13 @@ export default {
 - Automate the deployment to npmjs through a github hook
 - Components showcase (also built in this lib project) deployed on Heroku
 
+Extra libs to play with: 
+
+- https://lodash.com
+- https://www.npmjs.com/package/chalk (Backend)
+- https://www.npmjs.com/package/commander (CLI tools)
+- https://www.npmjs.com/package/moleculer (Microservices)
+
 
 Git repo: https://github.com/xdanradu/vue-components
 
