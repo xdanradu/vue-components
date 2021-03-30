@@ -1,16 +1,18 @@
 <template>
   <div id="app">
     <Banner msg="Some message from outside"></Banner>
+    <Photo path="https://homepages.cae.wisc.edu/~ece533/images/airplane.png"></Photo>
   </div>
 </template>
 
 <script>
 import Banner from './components/Banner.vue'
+import Photo from './components/Photo.vue'
 
 export default {
   name: 'App',
   components: {
-    Banner
+    Banner, Photo
   }
 }
 </script>
@@ -22,6 +24,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 0;
+  padding: 0;
 }
 </style>

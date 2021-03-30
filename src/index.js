@@ -1,11 +1,20 @@
 // Import vue component
 import Banner from './components/Banner.vue'
+import Photo from './components/Photo.vue'
+
+const Components = {
+    Banner, Photo
+}
 
 // Declare install function executed by Vue.use()
 export function install(Vue) {
     if (install.installed) return;
     install.installed = true;
-    Vue.component('Banner', Banner);
+    // Vue.component('Banner', Banner);
+    // Vue.component('Photo', Photo);
+    Object.keys(Components).forEach(name => {
+        Vue.component(name, Components[name]);
+    })
 }
 
 // Create module definition for Vue.use()
@@ -25,4 +34,4 @@ if (GlobalVue) {
 }
 
 // To allow use as module (npm/webpack/etc.) export component
-export default Banner;
+export default Components;

@@ -1,0 +1,127 @@
+<template>
+  <div class="photo-container">
+    <div class="photo" :style="{ backgroundImage: `url('${imgSrc}')` }"></div>
+    <div class="delete-button" v-on:click="remove()">&#10006;</div>
+    <div class="lds-ripple" v-if="loading">
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</template>
+
+<script>
+import axios from "axios";
+
+export default {
+  name: 'Photo',
+  props : {
+    path: String
+
+  },
+  data: function() {
+    return {
+      loading: true,
+      imgSrc: ''
+    };
+  },
+  created() {
+    console.log('created');
+    let myImage = new Image();
+    myImage.src = this.path;
+    myImage.onload = () => {
+      this.imgSrc = myImage.src;
+      this.loading = false;
+    };
+  },
+  methods: {
+    remove() {
+      axios
+          .delete(this.path)
+          .then((response) => {
+            console.log(response);
+            this.$emit("deleted", "true");
+          });
+    }
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.photo-container {
+  display: block;
+  height: 100px;
+  width: 100px;
+  flex: 0 0 auto;
+  overflow: hidden;
+  position: relative;
+
+  border-radius:10px;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: all .5s;
+}
+
+.photo:hover {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.5);
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.delete-button {
+  height:14px;
+  width: 14px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 10px;
+  transition: all .5s;
+}
+
+.delete-button:hover {
+  cursor: pointer;
+  background: crimson;
+  transform: scale(1.2);
+}
+
+.lds-ripple {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #999;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+</style>

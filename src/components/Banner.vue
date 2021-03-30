@@ -1,6 +1,6 @@
 <template>
     <div class="banner">
-        <h1>{{ msg }}</h1>
+        <h3>{{ msg }}</h3>
         <slot></slot>
     </div>
 </template>
@@ -14,11 +14,9 @@
 </script>
 <style scoped>
     .banner {
-        padding: 12px;
-        background-color: #fcf6cd;
-        color: #f6a623;
-        text-align: left;
-        position: fixed;
-        z-index: 2;
+        padding: 2px;
+        background-color: deepskyblue;
+        color: white;
+        text-align: center;
     }
 </style>
