@@ -1,18 +1,15 @@
 <template>
   <div id="app">
     <Banner msg="Some message from outside"></Banner>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import Banner from './components/Banner.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
     Banner
   }
 }
