@@ -30,7 +30,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 npm install  @xdanradu/vue-components -D
 ```
 
-import Components from "@flockos/vue-components";
+import Components from "@xdanradu/vue-components";
 
 Git repo: https://github.com/xdanradu/vue-components
 
