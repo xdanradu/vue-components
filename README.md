@@ -103,3 +103,9 @@ Git repo: https://github.com/xdanradu/vue-components
 ```
 
 Deploy to https://www.webcomponents.org/
+
+listing tags:
+git tag -l "v0.1.13*
+
+creating tags:
+git tag -a v1.4 -m "my version 1.4"
