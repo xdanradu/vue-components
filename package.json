@@ -9,7 +9,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "build-bundle": "vue-cli-service build --target lib --name xdanradu ./src/index.js",
-    "build-web-components": "vue-cli-service build --target wc --name my-custom-element ./src/web-component-wrapper.js",
+    "build-web-components": "vue-cli-service build --target wc --name my-custom-element ./src/components/VueWebComponent.vue",
     "publish": "npm publish --access public"
   },
   "dependencies": {
