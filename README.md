@@ -83,10 +83,22 @@ Git repo: https://github.com/xdanradu/vue-components
 ```
 
 ```html
-<script src="https://unpkg.com/vue"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-loader.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+<!--Load the web component polyfill-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.0.2/webcomponents-bundle.js"></script>-->
 <script src="./my-custom-element.js"></script>
-<my-custom-element msg="Hello web components"></my-custom-element>
+<h1>Scoped element</h1>
+<my-custom-element divclicked="call()" msg="Hello web component"></my-custom-element>
+<script>
+    console.log(document.getElementsByTagName('my-custom-element')[0]);
+    function call() {
+        console.log('a');
+    }
+    document.getElementsByTagName('my-custom-element')[0].addEventListener('divclicked', (event) => { console.log(event.target);} );
+</script> 
 ```
 
 Deploy to https://www.webcomponents.org/
