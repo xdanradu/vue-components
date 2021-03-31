@@ -1,6 +1,6 @@
 {
   "name": "@xdanradu/vue-components",
-  "version": "0.1.22",
+  "version": "0.1.23",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
@@ -57,5 +57,19 @@
   "unpkg": "dist/xdanradu.umd.min.js",
   "jsdelivr": "dist/xdanradu.umd.min.js",
   "style": "dist/xdanradu.css",
-  "repository": "git@github.com:xdanradu/vue-components.git"
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/xdanradu/vue-components.git"
+  },
+  "description": "```\r npm install\r ```",
+  "bugs": {
+    "url": "https://github.com/xdanradu/vue-components/issues"
+  },
+  "homepage": "https://github.com/xdanradu/vue-components#readme",
+  "keywords": [
+    "vue",
+    "components"
+  ],
+  "author": "Dan Radu",
+  "license": "MIT"
 }
