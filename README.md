@@ -124,4 +124,3 @@ git push --delete origin tagname
 
 Deleting a tag locally:
 git tag -d <tag_name>
-
