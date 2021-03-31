@@ -88,3 +88,5 @@ Git repo: https://github.com/xdanradu/vue-components
 <script src="./my-custom-element.js"></script>
 <my-custom-element msg="Hello web components"></my-custom-element>
 ```
+
+Deploy to https://www.webcomponents.org/
