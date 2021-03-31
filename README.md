@@ -71,6 +71,7 @@ Extra libs to play with:
 - https://www.npmjs.com/package/chalk (Backend)
 - https://www.npmjs.com/package/commander (CLI tools)
 - https://www.npmjs.com/package/moleculer (Microservices)
+- Electron
 
 
 Git repo: https://github.com/xdanradu/vue-components
