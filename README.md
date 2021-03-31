@@ -118,3 +118,6 @@ git push origin v0.1.14
 
 Deleting all the tags:
 FOR /f "tokens=*" %a in ('git tag') DO git tag -d %a
+
+Deleting tag from remote:
+git push --delete origin tagname
