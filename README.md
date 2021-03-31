@@ -116,3 +116,5 @@ git commit -a -m "v0.1.14"
 Pushing a tag:
 git push origin v0.1.14
 
+Deleting all the tags:
+FOR /f "tokens=*" %a in ('git tag') DO git tag -d %a
