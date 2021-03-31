@@ -56,5 +56,6 @@
   "main": "dist/xdanradu.common.js",
   "unpkg": "dist/xdanradu.umd.min.js",
   "jsdelivr": "dist/xdanradu.umd.min.js",
-  "style": "dist/xdanradu.css"
+  "style": "dist/xdanradu.css",
+  "repository": "git@github.com:xdanradu/vue-components.git"
 }
