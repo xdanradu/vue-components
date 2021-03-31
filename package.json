@@ -1,6 +1,6 @@
 {
   "name": "@xdanradu/vue-components",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
