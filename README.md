@@ -107,5 +107,11 @@ Deploy to https://www.webcomponents.org/
 listing tags:
 git tag -l "v0.1.13*
 
-creating tags:
-git tag -a v1.4 -m "my version 1.4"
+Creating tags:
+git tag -a v0.1.14 -m "my version 1.4"
+
+Git add . + git commit -m in one line:
+git commit -a -m "v0.1.14"
+
+Pushing a tag:
+git push origin v0.1.14
