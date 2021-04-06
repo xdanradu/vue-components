@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Banner msg="Some message from outside"></Banner>
+    <MenuOption url="http://google.com" option="Google"></MenuOption>
     <Photo path="https://homepages.cae.wisc.edu/~ece533/images/airplane.png"></Photo>
   </div>
 </template>
@@ -8,11 +9,12 @@
 <script>
 import Banner from './components/Banner.vue'
 import Photo from './components/Photo.vue'
+import MenuOption from './components/MenuOption';
 
 export default {
   name: 'App',
   components: {
-    Banner, Photo
+    Banner, Photo, MenuOption
   }
 }
 </script>
