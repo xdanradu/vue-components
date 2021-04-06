@@ -24,7 +24,7 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-### Usage in external project
+### Usage in external Vue project
 
 ```
 npm install  @xdanradu/vue-components -D
@@ -71,8 +71,56 @@ Extra libs to play with:
 - https://www.npmjs.com/package/chalk (Backend)
 - https://www.npmjs.com/package/commander (CLI tools)
 - https://www.npmjs.com/package/moleculer (Microservices)
+- Electron
 
 
 Git repo: https://github.com/xdanradu/vue-components
 
 
+### Usage as web component
+
+```bash
+    npm run build-web-components
+```
+
+```html
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+<!--Load the web component polyfill-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.0.2/webcomponents-bundle.js"></script>-->
+<script src="./my-custom-element.js"></script>
+<h1>Scoped element</h1>
+<my-custom-element divclicked="call()" msg="Hello web component"></my-custom-element>
+<script>
+    console.log(document.getElementsByTagName('my-custom-element')[0]);
+    function call() {
+        console.log('a');
+    }
+    document.getElementsByTagName('my-custom-element')[0].addEventListener('divclicked', (event) => { console.log(event.target);} );
+</script> 
+```
+
+Deploy to https://www.webcomponents.org/
+
+listing tags:
+git tag -l "v0.1.13*
+
+Creating tags:
+git tag -a v0.1.14 -m "my version 1.4"
+
+Git add . + git commit -m in one line:
+git commit -a -m "v0.1.14"
+
+Pushing a tag:
+git push origin v0.1.14
+
+Deleting all the tags:
+FOR /f "tokens=*" %a in ('git tag') DO git tag -d %a
+
+Deleting tag remotely:
+git push --delete origin tagname
+
+Deleting a tag locally:
+git tag -d <tag_name>
