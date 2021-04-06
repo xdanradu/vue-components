@@ -17,7 +17,7 @@
         display: inline-block;
         padding: 0;
         margin-right: 35px;
-        line-height: 0.8em;
+        line-height: 1em;
     }
 
     a {
@@ -33,15 +33,18 @@
         position: relative;
         padding: 9px 0;
         text-decoration: none;
-        color: #F0C34E;
+        color: #333;
+    }
+    a:hover {
+        color: crimson;
     }
     a::before {
         content: '';
         left: 0;
         bottom: 0;
-        height: 1px;
+        height: 3px;
         width: 0;
-        background: #b9bbbe;
+        background: crimson;
         position: absolute;
         transition: all .5s;
         top: auto;
@@ -58,9 +61,9 @@
         content: '';
         right: 0;
         top: 0;
-        height: 1px;
+        height: 3px;
         width: 0;
-        background: #b9bbbe;
+        background: crimson;
         position: absolute;
         transition: all .5s;
         bottom: auto;
